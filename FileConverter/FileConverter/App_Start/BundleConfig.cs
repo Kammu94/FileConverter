@@ -25,6 +25,11 @@ namespace FileConverter
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/libraries").Include(
+               "~/Assests/jsLib/jquery.min.js",
+               "~/Assests/jsLib/bootstrap.min.js",
+               "~/Assests/jsLib/angular.min.js"
+               ));
         }
     }
 }
