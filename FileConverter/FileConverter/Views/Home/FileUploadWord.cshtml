@@ -21,7 +21,28 @@
             @*<div>@Html.Raw(ViewBag.WordHtml)</div>*@
         </div>
         <div class="col-md-4">
-           
+
+        </div>
+    </div>
+</form>
+<h2>FileUploadWord</h2>
+
+<form class="validate " action="/Home/ConvertPDFintoDOCX" enctype="multipart/form-data" method="post" name="WordFileUpload">
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+            @using (Html.BeginForm("ConvertPDFintoDOCX", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="file" name="postedFile" />
+                <input type="submit" value="Upload" />
+            }
+            <hr />
+            @*<div>@Html.Raw(ViewBag.WordHtml)</div>*@
+        </div>
+        <div class="col-md-4">
+
         </div>
     </div>
 </form>
